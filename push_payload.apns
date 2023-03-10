@@ -1,0 +1,10 @@
+{
+  "Simulator Target Bundle": "top.dawenhing.PushToTalkDemo",
+  "aps" : {
+    "alert" : {
+      "title" : "Default title",
+      "body" : "Default body"
+    },
+    "mutable-content" : false
+  }
+}
