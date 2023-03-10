@@ -3,12 +3,12 @@
 P8_FILE="./party/sandbox.p8"
 AUTH_KEYID="M57BWJ3LT5"
 AUTH_TEAMID="HQUMU47JDU"
-
-# for Live Activity
+# bundle id
 TOPIC="bundle-id"
-PUSH_TYPE="liveactivity"
 # token
 TOKEN="804f8a2dac2d3a5dd62dae2a93b1eb4847e52e51ffa64cc1839e8e10a4dc54934d9795d6452a7fe1a65934a7d52094d3c46f9988e7cc2bccbac0b9fec60a7639aea8c176530969e5f9ddc2b6f3a320cd"
+
+PUSH_TYPE="liveactivity"
 
 # production environment
 # APNS_HOST_NAME=api.push.apple.com
@@ -19,16 +19,16 @@ timestamp=$(date +%s)
 read -r -d '' PAYLOAD <<-'EOF'
 {
     "aps": {
-        "timestamp": tttttttimestamp,
+        "timestamp": ReplaceWithTimestamp,
         "event": "update",
         "content-state": {
             "friends": [
                 {
-                    "name": "tttttttimestamp",
+                    "name": "dawenhing1",
                     "online": false
                 },
                 {
-                    "name": "Dart2",
+                    "name": "dawenhing2",
                     "online": true
                 }
             ]
@@ -41,7 +41,7 @@ read -r -d '' PAYLOAD <<-'EOF'
     }
 }
 EOF
-PAYLOAD=${PAYLOAD//tttttttimestamp/${timestamp}}
+PAYLOAD=${PAYLOAD//ReplaceWithTimestamp/${timestamp}}
 python3 -c "import sys,json;p=r'''${PAYLOAD}''';print(p);json.loads(p);"
 
 # --------------------------------------------------------------------------

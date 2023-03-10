@@ -5,6 +5,8 @@ Apple push service testing tools
 ### Using P12 certificate
 - Use apns-push-p12.sh shell script;
 - Replace variable `P12_FILE` with your exported p12 certificate file path;
+- Replace `TOPIC` variable with your bundle id;
+- Replace `token` variable with your token;
 - If your p12 file exported with password, remove it first with script `apns-p12-remove-password.sh`;
 ```Shell
 apns-p12-remove-password.sh apns.p12
@@ -17,6 +19,8 @@ And next time prompt you enter password, you should not enter anything, just pre
 - Use apns-push-p8.sh shell script;
 - Replace variable `P8_FILE` with your generated p8 certificate file path;
 - Set `AUTH_KEYID` and `AUTH_TEAMID` (from your apple developer account information);
+- Replace `TOPIC` variable with your bundle id;
+- Replace `token` variable with your token;
 
 ## PushToTalk
 `ptt-push-p12`

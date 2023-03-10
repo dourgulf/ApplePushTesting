@@ -1,11 +1,9 @@
 #!/bin/sh
 # P12 file path
 P12_FILE="./party/sandbox.p12"
-
 # for Push To Talk
 TOPIC="bundle-id"
 # token
-# TOKEN="5e8dbb8de32c0b231bf8b1ce89f0e3fdd52ab7603c197e7232206af781d3f396"
 TOKEN="37bba44db143bfdb2c43e3c7230a0b41fe3514e03cd50407ed57d47ff145f500"
 
 # production environment
@@ -20,7 +18,7 @@ read -r -d '' VPOPTT <<-'EOF'
     "remoteUrl": "https://cdnus101.183im.com/1/2/dc294e3a94b448873a7a6d7aeef0ea63/m/dd80a4ec07e845b896dab326e61a1c3a",
     "isGroup": false,
     "speakerUserInfo": {
-        "name": "Test03",
+        "name": "dawenhing",
         "portrait": "",
         "userId": "123403"
     },
@@ -34,8 +32,8 @@ EOF
 # jq 不支持中横线的字段命令
 PAYLOAD=$(  jq -n \
             --arg ptt "$VPOPTT" \
-            '{aps: {ptttttttttttttt: $ptt, "groupId": "2550248706004322984579-1"}}' )
-PAYLOAD=${PAYLOAD//ptttttttttttttt/voip-ptt}
+            '{aps: {ReplaceWithPayload: $ptt, "groupId": "2550248706004322984579-1"}}' )
+PAYLOAD=${PAYLOAD//ReplaceWithPayload/voip-ptt}
 
 curl -v \
     --header "apns-topic: ${TOPIC}.voip-ptt" \

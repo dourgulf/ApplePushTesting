@@ -3,12 +3,10 @@
 P8_FILE="./party/sandbox.p8"
 AUTH_KEYID="M57BWJ3LT5"
 AUTH_TEAMID="HQUMU47JDU"
-
 # bundle id
 TOPIC="bundle-id"
 # token
 TOKEN="728b1d069362e877610ae3631f5572da5f58c132399c7782b255f0d40a3435d8"
-
 
 # production environment
 # APNS_HOST_NAME=api.push.apple.com
