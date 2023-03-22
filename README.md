@@ -9,7 +9,7 @@
 - 替换`token`变量为你的token;
 - 如果你的 p12 文件导出了密码, 那么第一步需要执行脚本 `apns-p12-remove-password.sh`;
 ```Shell
-apns-p12-remove-password.sh apns.p12
+remove-p12-password.sh apns.p12
 mv apns.p12 protected-apns.p12
 mv unprotected.p12 apns.p12
 ```
