@@ -6,8 +6,8 @@
 - 使用`apns-push-p12.sh`脚本;
 - 替换变量 `P12_FILE` 为你导出的 p12 证书的路径；
 - 替换`TOPIC`变量为你的bundle id;
-- 替换`token`变量为你的token;
-- 如果你的 p12 文件导出了密码, 那么第一步需要执行脚本 `apns-p12-remove-password.sh`;
+- 替换`TOKEN`变量为你的token;
+- 如果你的 p12 文件导出了密码, 那么第一步需要执行脚本 `remove-p12-password`;
 ```Shell
 remove-p12-password.sh apns.p12
 mv apns.p12 protected-apns.p12
@@ -18,9 +18,9 @@ mv unprotected.p12 apns.p12
 - 替换变量 `P8_FILE` 为你产生的 p8 证书的路径;
 - 并修改 `AUTH_KEYID` 和 `AUTH_TEAMID`（在创建 p8 证书时，从苹果开发者后台中获取）;
 - 替换`TOPIC`变量为你的bundle id;
-- 替换`token`变量为你的token;
+- 替换`TOKEN`变量为你的token;
 
 ## PushToTalk推送
-`ptt-push-p12`
+`pushtotalk-push-p12`
 ## LiveActivity推送
-`liveactivity-push.sh`
+`liveactivity-push-p8.sh`
