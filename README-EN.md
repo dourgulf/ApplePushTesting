@@ -23,7 +23,7 @@ And next time prompt you enter password, you should not enter anything, just pre
 - Replace `token` variable with your token;
 
 ## PushToTalk
-`ptt-push-p12`
+`pushtotalk-p12`
 
 ## LiveActivity
 `liveactivity-push.sh`
