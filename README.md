@@ -21,6 +21,6 @@ mv unprotected.p12 apns.p12
 - 替换`TOKEN`变量为你的token;
 
 ## PushToTalk推送
-`pushtotalk-push-p12`
+`pushtotalk-push-p12.sh`
 ## LiveActivity推送
 `liveactivity-push-p8.sh`
