@@ -9,7 +9,7 @@ Apple push service testing tools
 - Replace `token` variable with your token;
 - If your p12 file exported with password, remove it first with script `apns-p12-remove-password.sh`;
 ```Shell
-apns-p12-remove-password.sh apns.p12
+remove-p12-password.sh apns.p12
 mv apns.p12 protected-apns.p12
 mv unprotected.p12 apns.p12
 ```
