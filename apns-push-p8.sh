@@ -1,8 +1,8 @@
 #!/bin/sh
 # P8 file path
 P8_FILE="./party/sandbox.p8"
-AUTH_KEYID="M57BWJ3LT5"
-AUTH_TEAMID="HQUMU47JDU"
+AUTH_KEYID="xxxx"
+AUTH_TEAMID="xxxx"
 # bundle id
 TOPIC="bundle-id"
 # token
