@@ -8,6 +8,8 @@ TOPIC="bundle-id"
 # token
 TOKEN="728b1d069362e877610ae3631f5572da5f58c132399c7782b255f0d40a3435d8"
 
+PUSH_TYPE="alert"
+
 # production environment
 # APNS_HOST_NAME=api.push.apple.com
 # development environment
@@ -49,8 +51,9 @@ CLAIMS=$(printf '{ "iss": "%s", "iat": %d }' "$AUTH_TEAMID" "$TIMESTAMP" | base6
 JWT="$HEADER.$CLAIMS.$(sign $HEADER.$CLAIMS)"
 
 curl \
-   --header "content-type: application/json" \
-   --header "authorization: bearer $JWT" \
-   --header "apns-topic: $TOPIC" \
-   --data "$PAYLOAD" \
-   https://$APNS_HOST_NAME/3/device/$TOKEN
+    --header "content-type: application/json" \
+    --header "authorization: bearer $JWT" \
+    --header "apns-topic: $TOPIC" \
+    --header "apns-push-type: ${PUSH_TYPE}" \
+    --data "$PAYLOAD" \
+    https://$APNS_HOST_NAME/3/device/$TOKEN
